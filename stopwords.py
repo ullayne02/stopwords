@@ -17,7 +17,7 @@ class StopWords():
         print (filtered_sentence)
         return filtered_sentence
 
-    def setStopWords(arq):
+    def setStopWords(self, arq):
         file_words = open(arq, 'r')
         stop_words = file_words.read()
         return stop_words
