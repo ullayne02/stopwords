@@ -1,6 +1,4 @@
-import nltk
-from nltk.tokenize import word_tokenize
-nltk.download('punkt')
+
 
 class StopWords():
 
@@ -11,7 +9,7 @@ class StopWords():
 
     def removeStopWords (self, inputString):
         stop_words = self.getStopWords()
-        word_tokens = word_tokenize(inputString)
+        word_tokens = inputString.split()
         filtered_sentence = [w for w in word_tokens if not w in stop_words]
         print(inputString)
         print (filtered_sentence)
